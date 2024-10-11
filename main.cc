@@ -123,22 +123,7 @@ void classifyTokens(const vector<string>& lines, const vector<string>& comments)
                 identifierTokens.push_back(token);
             }
         }
-
-// old code that did not work because it would count words inside " " as identifiers as well and not just literals. 
-// this only found key words and identifiers, it did took into account the words within the "  ", which caused my output to be a larger number than the expected output
-/* for (sregex_iterator i = words_begin; i != words_end; ++i) {
-        string token = (*i).str();
-        if (find(keywords.begin(),keywords.end(), token) != keywords.end()) {
-            keywordTokens.push_back(token);
-        } else {
-            identifierTokens.push_back(token);
-        }
-   }*/
-// auto literals_begin = sregex_iterator(line.begin(), line.end(), literalPattern);
-// for (sregex_iterator i = literals_begin; i != words_end; ++i) {
-//     literalTokens.push_back((*i).str());
-// }
-
+        
         // Iterator to check for operators from the beginning to end of the line
         auto operators_begin = sregex_iterator(line.begin(), line.end(), operatorPattern);
         // Loops through the line to find any matches of operators and converts it into a string stored in operatorTokens
