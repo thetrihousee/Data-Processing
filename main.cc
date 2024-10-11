@@ -50,7 +50,7 @@ vector<string> removeComments(const vector<string>& lines, vector<string>& comme
             line = regex_replace(line, slCommentPattern, "");
         }
 
-        // Searches for parsers inside if not found it will be executed
+        // If true, then shows the comment is multiline 
         if (insideMultiLineComment) {
             if (regex_search(line, match, multiLineEndPattern)) {
                 insideMultiLineComment = false;
@@ -123,7 +123,6 @@ void classifyTokens(const vector<string>& lines, const vector<string>& comments)
                 identifierTokens.push_back(token);
             }
         }
-        
         // Iterator to check for operators from the beginning to end of the line
         auto operators_begin = sregex_iterator(line.begin(), line.end(), operatorPattern);
         // Loops through the line to find any matches of operators and converts it into a string stored in operatorTokens
