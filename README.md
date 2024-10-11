@@ -1,1 +1,1 @@
-# Data-Processing
+This is a C++ code for a lexical analyzer. This project is to create a data processing code that will read a file and tokenize and organize it. 
