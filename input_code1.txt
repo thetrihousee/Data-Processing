@@ -1,0 +1,8 @@
+// C++ Program with a Function
+void greet() {
+    cout << "Hello!" << endl; // Print greeting
+}
+int main() {
+    greet();
+    return 0;
+}

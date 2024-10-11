@@ -1,0 +1,12 @@
+/*
+* C++ program with loop and condition
+*/
+int main() {
+    int number = 10;
+    if (number > 5) {
+        cout << "Number is greater than 5" << endl;
+    } else {
+        cout << "Number is less than or equal to 5" << endl;
+    }
+    return 0;
+}
